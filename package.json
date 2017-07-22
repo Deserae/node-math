@@ -1,0 +1,17 @@
+{
+  "name": "node-math",
+  "version": "1.0.0",
+  "description": "some node math code practice for DesDes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "poop"
+  ],
+  "author": "Des Dias",
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^8.0.2"
+  }
+}
