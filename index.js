@@ -1,8 +1,6 @@
 #! /usr/bin/env node
 var argv = require('yargs').argv;
-console.log("newtmgr version 0.0.1");
-
-
+//console.log("newtmgr version 0.0.1");
 console.log(argv._);
 
 if(argv._.includes("pumpkins")){
@@ -15,34 +13,18 @@ if(argv.hasOwnProperty("deserae")){
 }
 
 
-if (argv.ships > 3 && argv.distance < 53.5) {
-    console.log('Plunder more riffiwobbles!');
-} else {
-    console.log('Retreat from the xupptumblers!');
-}
+// if (argv.ships > 3 && argv.distance < 53.5) {
+//     console.log('Plunder more riffiwobbles!');
+// } else {
+//     console.log('Retreat from the xupptumblers!');
+// }
 
 ///math**********************
 
-// var add =function(params){
-//   var num = 0;
-//   argv._.forEach(function(x){
-//     num = num +x;
-//   });
-//   return num;
-// };
 
-var add =function(params){
-  console.log('poop');
-  console.log(params);
-  var number = 0;
-  argv._.forEach(function(x){
-    number = number +x;
-  });
-  return number;
-};
 
-  var result = add(argv._);
-  console.log(result);
+  // var result = add(argv._);
+  // console.log(result);
 
 var subtract =function(params){
   var number = 0;
@@ -52,6 +34,9 @@ var subtract =function(params){
   return number;
 };
 
+  // var result = subract(argv._);
+  // console.log(result);
+
 var multiply =function(params){
   var mnum = 1;
   argv._.forEach(function(x){
@@ -60,6 +45,9 @@ var multiply =function(params){
   return mnum;
 };
 
+  // var result = multiply(argv._);
+  // console.log(result);
+
 var divide =function(params){
   var mnum = 1;
   argv._.forEach(function(x){
@@ -67,6 +55,31 @@ var divide =function(params){
   });
   return mnum;
 };
+
+  // var result = divide(argv._);
+  // console.log(result);
+var add =function(params){
+  var number = 0;
+  params.forEach(function(param){
+    number = number +param;
+  });
+  return number;
+};
+
+if (argv.add){
+  console.log("add");
+  var result = add(argv._);
+  console.log(result);
+}
+if (argv.subtract){
+  console.log("subtract");
+}
+if (argv.multiply){
+  console.log("multiply");
+}
+if (argv.divide){
+  console.log("dividepoo");
+}
 
 //+-*/
 //if no options passed, help
