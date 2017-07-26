@@ -3,15 +3,16 @@ var argv = require('yargs').argv;
 //console.log("newtmgr version 0.0.1");
 console.log(argv._);
 
-if(argv._.includes("pumpkins")){
-  console.log("!!!!!");
-}
-//can't remember how to invoke this
 
-if(argv.hasOwnProperty("deserae")){
-  console.log("hamster",argv);
-}
+//Yargs examples**************************************
 
+// if(argv._.includes("pumpkins")){
+//   console.log("!!!!!");
+// }
+
+// if(argv.hasOwnProperty("deserae")){
+//   console.log("hamster",argv);
+// }
 
 // if (argv.ships > 3 && argv.distance < 53.5) {
 //     console.log('Plunder more riffiwobbles!');
@@ -19,12 +20,15 @@ if(argv.hasOwnProperty("deserae")){
 //     console.log('Retreat from the xupptumblers!');
 // }
 
-///math**********************
+///math*********************************************
 
-
-
-  // var result = add(argv._);
-  // console.log(result);
+var add =function(params){
+  var number = 0;
+  params.forEach(function(param){
+    number = number +param;
+  });
+  return number;
+};
 
 var subtract =function(params){
   var number = 0;
@@ -34,9 +38,6 @@ var subtract =function(params){
   return number;
 };
 
-  // var result = subract(argv._);
-  // console.log(result);
-
 var multiply =function(params){
   var mnum = 1;
   argv._.forEach(function(x){
@@ -44,9 +45,6 @@ var multiply =function(params){
   });
   return mnum;
 };
-
-  // var result = multiply(argv._);
-  // console.log(result);
 
 var divide =function(params){
   var mnum = 1;
@@ -56,30 +54,45 @@ var divide =function(params){
   return mnum;
 };
 
-  // var result = divide(argv._);
-  // console.log(result);
-var add =function(params){
-  var number = 0;
-  params.forEach(function(param){
-    number = number +param;
-  });
-  return number;
-};
 
 if (argv.add){
-  console.log("add");
+  console.log("insideadd");
   var result = add(argv._);
   console.log(result);
 }
 if (argv.subtract){
-  console.log("subtract");
+  console.log("insidesubtract");
+  var result = subtract(argv._);
+  console.log(result);
 }
 if (argv.multiply){
-  console.log("multiply");
+  console.log("insidemultiply");
+  var result = multiply(argv._);
+  console.log(result);
 }
 if (argv.divide){
-  console.log("dividepoo");
+  console.log("insidedivide");
+  var result = divide(argv._);
+  console.log(result);
 }
+else {
+  console.log("Why don't you try doing some math");
+}
+
+
+//Notes for Jacob <3 ***************************
+
+//When running ./ only got a permission denied message - could only run as node index.js
+//--checked if yargs was installed
+//--searched permission denied error
+//unsure how to get arguments into function
+//argv vs argv_
+
+
+
+
+
+
 
 //+-*/
 //if no options passed, help
