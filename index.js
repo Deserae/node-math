@@ -75,23 +75,12 @@ if (argv.divide){
   var result = divide(argv._);
   console.log(result);
 }
-else {
-  console.log("Why don't you try doing some math");
+if(argv.help || argv.h){
+  console.log("Choose -add, -subract, -multiply, -divide \n Example: '-add 1 2' will return 3." );
 }
-
-
-//Notes for Jacob <3 ***************************
-
-//When running ./ only got a permission denied message - could only run as node index.js
-//--checked if yargs was installed
-//--searched permission denied error
-//unsure how to get arguments into function
-//argv vs argv_
-
-
-
-
-
+else {
+  console.log("Use --help to get more information on running Yargs Math");
+}
 
 
 //+-*/
